@@ -1,0 +1,21 @@
+<html> 
+  <head> 
+        <meta charset="utf-8"> 
+        <title>HelloWorld</title> 
+  </head> 
+    <body> 
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+        <script>  
+			var index = [0, 1, 2, 3, 4];
+			var color = ["red", "blue", "green", "yellow", "black"];
+ 
+			var ordinal = d3.scale.ordinal()
+					.domain(index)
+					.range(color);
+			 
+			ordinal(0);    
+			ordinal(2);    
+			ordinal(9);
+        </script> 
+    </body> 
+</html>

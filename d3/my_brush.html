@@ -1,0 +1,30 @@
+<html> 
+  <head> 
+        <meta charset="utf-8"> 
+        <title>My Brush</title> 
+		<style>
+			.rectContainer {
+				fill: #fff;
+				fill-opacity: .7;
+				stroke: #aaa;
+			}
+		</style>
+  </head> 
+    <body> 
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+        <script>  
+			var svg = d3.selectAll("body").append('div').append('svg').attr('width', 1500).attr('height', 1500);
+			var brushScale = d3.scale.ordinal().domain([1,100]).rangePoints([0, 100], 1);
+			var container = svg.append('g').attr('class', 'rectContainer');
+			container.append('rect').attr('width', 900).attr('height', 900);
+			
+			
+			
+			container.append("g")
+				.attr("class", "brush")
+				.call(d3.svg.brush().x(brushScale))
+				.selectAll("rect")
+				.attr("height", 100);
+        </script> 
+    </body> 
+</html>

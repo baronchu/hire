@@ -1,0 +1,22 @@
+<html> 
+  <head> 
+        <meta charset="utf-8"> 
+        <title>HelloWorld</title> 
+  </head> 
+    <body> 
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+        <script>  
+			var dataset = [1.2, 2.3, 0.9, 1.5, 3.3];
+			var max = d3.max(dataset);
+			var min = d3.min(dataset);
+ 
+			var linear = d3.scale.linear()
+					.domain([min, max])
+					.range([0, 300]);
+			 
+			linear(0.9);    //返回 0
+			linear(2.3);    //返回 175
+			linear(3.3);
+        </script> 
+    </body> 
+</html>

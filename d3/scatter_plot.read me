@@ -1,0 +1,25 @@
+categoricalValue    legend数值
+isDefaultCategorical 当前是不是用用户选择的category
+binsPerAxis 每个数轴多少等分
+binRecords  实际bin的数据  一条就是一个bin
+correlation内的数据是无序的
+xBucketId   在bin里的刻度值  第几个刻度
+
+
+axis内的数据是有序的
+
+cellSize 一个cell的大小  不是画出来的  而是实际比较大
+
+ticksize 是tick刻度线的长度
+
+svg frame距离top是固定12px  左右居中
+
+category value -> to clor
+
+
+sort count降序  
+当大于21个颜色值时， 前20一一对应前20个color   其他的count对应第21个color
+
+
+
+根据皮尔森系数来给出颜色

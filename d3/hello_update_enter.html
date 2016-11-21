@@ -1,0 +1,29 @@
+<html> 
+  <head> 
+        <meta charset="utf-8"> 
+        <title>HelloWorld</title> 
+  </head> 
+    <body> 
+        <p></p>
+        <p></p>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+        <script>  
+			var dataset = [1,2,3,4,5];
+			var body = d3.select('body');
+			
+			var p = body.selectAll('p');
+			var update = p.data(dataset);
+			
+			var enter = update.enter();
+			
+			update.text(function(d) {
+				return 'update ' + d;
+			});
+			
+			// first must append new element
+			enter.append('p').text(function(d){
+				return 'enter ' + d;
+			});
+        </script> 
+    </body> 
+</html>
